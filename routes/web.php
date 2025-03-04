@@ -11,3 +11,5 @@ Route::get('/', function () {
 Route::get('/motorcycle', [MotorcycleController::class, 'index']);
 
 Route::get('/brand', [BrandController::class, 'index']);
+
+Route::get('/motorcycle/{id}', [MotorcycleController::class, 'detail']);
