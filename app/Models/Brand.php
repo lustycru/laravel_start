@@ -10,8 +10,4 @@ class Brand extends Model
      * @var string
     */
     protected $name = 'string';
-
-    /*
-     * @var int
-    */
 }
