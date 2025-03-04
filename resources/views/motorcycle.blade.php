@@ -4,6 +4,8 @@
         Nom : {{ $item->name }}
         <br>
         Price : {{ $item->price }} €
+        <br>
+        <a href="/motorcycle/{{ $item->id }}">Voir les détails</a>
         <br> <br>
     @endforeach
 </div>

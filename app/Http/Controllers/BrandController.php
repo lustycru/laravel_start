@@ -13,4 +13,9 @@ class BrandController extends Controller
         $brands = Brand::All();
         return view('brand', compact('brands'));
     }
+
+    public function detail($id) {
+        $detail = Brand::query()->find($id);
+        return view('brandDetail', compact('detail'));
+    }
 }

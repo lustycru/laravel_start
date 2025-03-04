@@ -16,6 +16,6 @@ class MotorcycleController extends Controller
 
     public function detail($id) {
         $detail = Motorcycle::query()->find($id);
-        return view('detail', compact('detail'));
+        return view('motorcycleDetail', compact('detail'));
     }
 }
