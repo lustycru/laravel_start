@@ -13,8 +13,14 @@ return new class extends Migration
     {
         Schema::create('motorcycles', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
+            $table->string('name');
+            $table->integer('price');
         });
+
+        DB::table('motorcycles')->insert([
+            ['name' => 'Piwi', 'price' => 1200],
+            ['name' => 'Kisbee', 'price' => 600],
+        ]);
     }
 
     /**
