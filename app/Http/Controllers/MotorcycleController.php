@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Motorcycle;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\View\View;
@@ -9,7 +10,7 @@ use Illuminate\View\View;
 class MotorcycleController extends Controller
 {
     public function index() {
-        $motorcycles = DB::select('SELECT * FROM motorcycles');
-        return view('motorcycle', ['motorcycles' => $motorcycles]);
+        $motorcycles = Motorcycle::all();
+        return view('motorcycle', compact('motorcycles'));
     }
 }

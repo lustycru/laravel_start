@@ -8,12 +8,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/motorcycle', function () {
-    $motorcycle = new MotorcycleController();
-    return $motorcycle->index();
-});
+Route::get('/motorcycle', [MotorcycleController::class, 'index']);
 
-Route::get('/brand', function () {
-    $brand = new BrandController();
-    return $brand->index();
-});
+Route::get('/brand', [BrandController::class, 'index']);
